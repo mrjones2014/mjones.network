@@ -100,13 +100,18 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const title = getBlockTitle(block, recordMap) || site.name;
 
   config.isDev &&
-    console.dir("notion page", {
-      isDev: config.isDev,
-      title,
-      pageId,
-      rootNotionPageId: site.rootNotionPageId,
-      recordMap,
-    });
+    (() => {
+      console.group();
+      console.log("notion page");
+      console.dir({
+        isDev: config.isDev,
+        title,
+        pageId,
+        rootNotionPageId: site.rootNotionPageId,
+        recordMap,
+      });
+      console.groupEnd();
+    })();
 
   if (!config.isServer) {
     // add important objects to the window global for easy debugging
