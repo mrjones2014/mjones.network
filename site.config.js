@@ -14,9 +14,9 @@ module.exports = {
   copyrightAuthor: "M. Jones Software Systems, LLC.",
 
   // open graph metadata (optional)
-  description: "Example site description",
+  description: "Hi there!",
   socialImageTitle: "Mat Jones",
-  socialImageSubtitle: "Hello World! 👋",
+  socialImageSubtitle: "Software Engineer 👋",
 
   // social usernames (optional)
   github: "mrjones2014",
@@ -34,7 +34,7 @@ module.exports = {
   imageCDNHost: null,
 
   // Utteranc.es comments via GitHub issue comments (optional)
-  utterancesGitHubRepo: null,
+  utterancesGitHubRepo: "mrjones2014/mjones.network",
 
   // whether or not to enable support for LQIP preview images (optional)
   // NOTE: this requires you to set up Google Firebase and add the environment
