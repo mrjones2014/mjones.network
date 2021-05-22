@@ -1,8 +1,9 @@
-import Head from "next/head";
-import * as React from "react";
+import config from "lib/config";
 import * as types from "lib/types";
+import Head from "next/head";
+import Image from "next/image";
+import * as React from "react";
 import { PageHead } from "./PageHead";
-
 import styles from "./styles.module.css";
 
 export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
@@ -21,11 +22,12 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
 
       <div className={styles.container}>
         <main className={styles.main}>
-          <h1>Notion Page Not Found</h1>
+          <h1>Page Not Found</h1>
 
           {error ? (
             <p>{error.message}</p>
           ) : (
+            config.isDev &&
             pageId && (
               <p>
                 Make sure that Notion page "{pageId}" is publicly accessible.
@@ -33,10 +35,12 @@ export const Page404: React.FC<types.PageProps> = ({ site, pageId, error }) => {
             )
           )}
 
-          <img
+          <Image
             src="/404.png"
             alt="404 Not Found"
             className={styles.errorImage}
+            width="640px"
+            height="480px"
           />
         </main>
       </div>
