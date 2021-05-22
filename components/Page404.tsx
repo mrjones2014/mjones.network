@@ -1,4 +1,4 @@
-import config from "lib/config";
+import * as config from "lib/config";
 import * as types from "lib/types";
 import Head from "next/head";
 import Image from "next/image";

@@ -100,6 +100,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
   const title = getBlockTitle(block, recordMap) || site.name;
 
   config.isDev &&
+    typeof window !== "undefined" &&
     (() => {
       console.group();
       console.log("notion page");
